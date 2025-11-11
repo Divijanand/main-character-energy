@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<script src="https://cdn.jsdelivr.net/npm/phaser@3.85.0/dist/phaser.min.js"></script>
+<html>
+<head>
+    <title>Main Character Energy</title>
+    </script><grok-card data-id="bf16a2" data-type="citation_card"></grok-card>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet"><grok-card data-id="56f896" data-type="citation_card"></grok-card>
+    <style>
+        body { margin: 0; background: linear-gradient(135deg, #0f0f23 0%, #1a1a3e 50%, #2a1a4e 100%); font-family: 'Orbitron', monospace; overflow: hidden; }
+        canvas { display: block; margin: auto; box-shadow: 0 0 50px rgba(100,150,255,0.5); }
+        @font-face { font-family: 'Orbitron'; src: local('Orbitron'); } /* Preload */
+    </style>
+</head>
+<body>
+<div style="font-family: Orbitron, monospace; position: absolute; left: -1000px; visibility: hidden;">LOADING FONT</div> <!-- Font kickstart -->
+<script src="js/data/data.js"></script>
+<script src="js/scenes/MainMenu.js"></script>
+<script src="js/scenes/DayScene.js"></script>
+<script src="js/scenes/CharCreate.js"></script>
+<script src="js/scenes/Summary.js"></script>
+<script>
+    const config = {
+        type: Phaser.AUTO,
+        width: 900,
+        height: 700,
+        backgroundColor: '#0f0f23',
+        scene: [MainMenu, DayScene, Summary],
+        scale: { mode: Phaser.Scale.FIT, autoCenter: Phaser.Scale.CENTER_BOTH }
+    };
+    const game = new Phaser.Game(config);
+</script>
+</body>
+</html>
